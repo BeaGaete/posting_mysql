@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<table class='table table-bordered'>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>post</td>
+      <td>fecha</td>
+    </tr>
+  </thead>
+  <tbody>
+    {%if posts %}
+    {% for post in posts %}
+    <tr>
+      <td>{{post.texto}}</td>
+      <td>{{post.timestamp}}</td>
+      <td>{{post.ip}}</td>
+    </tr>
+    {% endfor %}
+    {% else %}
+    <h1>No hay registros de post</h1>
+    {% endif %}
+  </tbody>
+</table>
+{%endblock%}

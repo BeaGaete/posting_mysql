@@ -1,0 +1,22 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang=es dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='{% static "css/bootstrap.min.css"%}'>
+    <title>{%block title%} Post Server {%endblock%}</title>
+  </head>
+  <body>
+    {%block header%}
+    {% include 'base/header.html'%}
+    {%endblock%}
+
+    {% block content %}
+    <h5>Escribe tu post</h5>
+    {%endblock%}
+
+    {% block footer %}
+    <h5>Beatriz Gaete</h5>
+    {%endblock%}
+  </body>
+</html>
